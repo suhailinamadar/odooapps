@@ -1,0 +1,93 @@
+<odoo>
+    <record id="custom_id" model="ir.ui.view">
+        <field name="name">General Settings Gcs</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//div[@id='contacts_settings']" position="before">
+                    <div id="signature">
+                        <h2>Signature Parameters</h2>
+                        <div class='row mt16 o_settings_container' id='signature'>
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="signature_option">
+                                <div class="o_setting_left_pane">
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="signature_option" string="Signature Option"/>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="signature_option" class="o_light_label" widget="radio"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="signature_position">
+                                <div class="mt16">
+                                    <div class="o_setting_left_pane">
+                                        <field name="signature_position"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" id="signature_position1">
+                                        <label string="Signature Position" for="signature_position"/>
+
+                                        <div class="text-muted" id="signature_position">
+                                            Set the signature position at left in the reports
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="sale_order">
+                                <div class="mt16">
+                                    <div class="o_setting_left_pane">
+                                        <field name="sale_order"/>
+                                    </div>
+
+                                    <div class="o_setting_right_pane" id="sale_order1">
+                                        <label string="Sale Order" for="sale_order"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="invoice">
+                                <div class="o_setting_left_pane">
+                                    <div class="o_setting_left_pane">
+                                        <field name="invoice"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" id="invoice1">
+                                        <label string="Invoice" for="invoice"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="purchase_order">
+                                <div class="o_setting_left_pane">
+                                    <div class="o_setting_left_pane">
+                                        <field name="purchase_order"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" id="purchase_order1">
+                                        <label string="Purchase Order" for="purchase_order"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="request_for_quotation">
+                                <div class="o_setting_left_pane">
+                                    <div class="o_setting_left_pane">
+                                        <field name="request_for_quotation"/>
+                                    </div>
+                                    <div class="o_setting_right_pane" id="request_for_quotation1">
+                                        <label string="Request For Quotation" for="request_for_quotation"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>

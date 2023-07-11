@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="gcs_saleorder_inherit1" inherit_id="sale.report_saleorder_document">
+
+        <xpath expr="//div[@class='page']" position="after">
+            <t t-if="doc.type_of_signature == 'company_signature'">
+                <t t-if="doc.is_sale_order">
+                    <t t-if="doc.company_id.signature">
+                        <t t-if="doc.signature_position">
+                            <div class="text-left" style="float:left; padding-top:50px">
+                                <img t-att-src="image_data_uri(doc.company_id.signature)"
+                                     style="max-height: 3cm; max-width: 6cm;"/>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <div class="text-right" style="float:right; padding-top:50px">
+                                <img t-att-src="image_data_uri(doc.company_id.signature)"
+                                     style="max-height: 3cm; max-width: 6cm;"/>
+                            </div>
+
+                        </t>
+                    </t>
+                </t>
+            </t>
+            <t t-if="doc.type_of_signature == 'individual_signature'">
+                <t t-if="doc.is_sale_order">
+                    <t t-if="doc.user_id.gcs_signature">
+                        <t t-if="doc.signature_position">
+                            <div class="text-left" style="float:left; padding-top:50px">
+                                <img t-att-src="image_data_uri(doc.user_id.gcs_signature)"
+                                     style="max-height: 3cm; max-width: 6cm;"/>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <div class="text-right" style="float:right; padding-top:50px">
+                                <img t-att-src="image_data_uri(doc.user_id.gcs_signature)"
+                                     style="max-height: 3cm; max-width: 6cm;"/>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </xpath>
+
+    </template>
+</odoo>
