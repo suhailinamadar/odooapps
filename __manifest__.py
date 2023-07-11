@@ -8,7 +8,8 @@
     'description': """
         This module extends the functionality of Odoo 16 by adding a signature feature to the reports of Sale Orders, Quotations, Invoices, Purchase Orders, and Requests For Quotation. It allows users to update signatures and display them in these reports, with the option of positioning the signatures on the left.""",
     "category": "",
-    "summary": "",
+    "summary": "Signature in reports",
+    'license': 'OPL-1',
     "sequence": "-1000",
     "depends": ['base', 'account', 'sale', 'purchase'],
     "data": [
