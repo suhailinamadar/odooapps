@@ -1,19 +1,20 @@
-# See LICENSE file for full copyright and licensing details.
 # -*- coding: utf-8 -*-
 {
-    "name": "Gcs Signature",
-    "version": "1.0.0",
-    "author": "Geelani Consultancy & Solutions, Aseemuddin Kazi, Mohamed Sohil Inamdar",
-    "website": "https://www.geelani.com",
-    'description': """
-        This module extends the functionality of Odoo 16 by adding a signature feature to the reports of Sale Orders, Quotations, Invoices, Purchase Orders, and Requests For Quotation. It allows users to update signatures and display them in these reports, with the option of positioning the signatures on the left.""",
-    "category": "",
-    "summary": "Signature in reports",
+    'name': 'Gcs Signature',
+    'version': '1.0.0',
+    'summary': 'Odoo 16 Signature Model',
+    'sequence': -100,
+    'description': """Odoo 16""",
+    'category': 'Tutorials',
+    'author': 'Geelani',
+    'maintainer': 'Geelani',
+    'website': 'https://www.geelani.com',
     'license': 'AGPL-3',
-    "sequence": "-1000",
-    "depends": ['base', 'account', 'sale', 'purchase'],
-    "data": [
-        "views/gcs_res_company.xml",
+    'depends': [
+        'base', 'account', 'sale', 'purchase'
+    ],
+    'data': [
+      "views/gcs_res_company.xml",
         "views/gcs_invoice.xml",
         "views/gcs_sales.xml",
         "views/gcs_purchase_order.xml",
@@ -24,7 +25,8 @@
         "reports/gcs_purchase_order_report.xml",
         "reports/gcs_rfq_report.xml",
     ],
-    "application": True,
-    "auto_install": False,
-    "installable": True,
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
