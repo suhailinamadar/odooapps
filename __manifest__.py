@@ -9,7 +9,6 @@
     'author': 'Geelani',
     'maintainer': 'Geelani',
     'website': 'https://www.geelani.com',
-    'license': 'AGPL-3',
     'depends': [
         'base', 'account', 'sale', 'purchase'
     ],
